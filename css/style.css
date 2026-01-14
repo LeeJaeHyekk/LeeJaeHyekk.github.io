@@ -1,3 +1,4 @@
+/* CSS Variables with fallback colors */
 :root {
   --bg: #f8f9fa;
   --text: #1a202c;
@@ -7,6 +8,12 @@
   --accent-hover: #5568d3;
   --border: #e2e8f0;
   --border-radius: 12px;
+}
+
+/* Fallback for browsers that don't support CSS variables */
+body {
+  background: #f8f9fa;
+  color: #1a202c;
 }
 
 * {
@@ -76,23 +83,48 @@ img {
   gap: 40px;
 }
 
+@supports not (gap: 40px) {
+  .hero-content {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  
+  .hero-image {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .hero-text {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
 .hero-image {
   flex: 0 0 33.333%;
   max-width: 33.333%;
+  width: 33.333%;
+  padding-bottom: 33.333%; /* aspect-ratio: 1 fallback */
   aspect-ratio: 1;
   border-radius: 12px;
   overflow: hidden;
   border: 2px solid var(--border);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background: var(--bg);
+  position: relative;
 }
 
 .hero-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
+  /* Fallback for browsers that don't support object-fit */
+  font-family: 'object-fit: cover; object-position: center;';
 }
 
 .hero-text {
@@ -122,8 +154,18 @@ img {
 
 .hero-text .links {
   display: flex;
-  gap: 16px;
   flex-wrap: wrap;
+  gap: 16px;
+}
+
+@supports not (gap: 16px) {
+  .hero-text .links {
+    margin: -8px;
+  }
+  
+  .hero-text .links a {
+    margin: 8px;
+  }
 }
 
 .hero-text .links a {
@@ -221,6 +263,16 @@ section:last-child {
   gap: 24px;
 }
 
+@supports not (gap: 24px) {
+  .about-section .card-content > * {
+    margin-bottom: 24px;
+  }
+  
+  .about-section .card-content > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .about-text {
   width: 100%;
 }
@@ -246,9 +298,30 @@ section:last-child {
 }
 
 .contribution-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  /* Grid fallback */
+  margin: -12px;
+}
+
+.contribution-grid > * {
+  flex: 1 1 280px;
+  margin: 12px;
+  min-width: 0;
+}
+
+/* Modern browsers with grid support */
+@supports (display: grid) {
+  .contribution-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 0;
+  }
+  
+  .contribution-grid > * {
+    margin: 0;
+  }
 }
 
 .contribution-item {
@@ -320,6 +393,18 @@ section:last-child {
   position: relative;
 }
 
+@supports not (gap: 20px) {
+  .timeline-item {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  
+  .timeline-item > * {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
 .timeline-item:last-child {
   margin-bottom: 0;
 }
@@ -387,10 +472,33 @@ section:last-child {
 
 /* Skills Grid */
 .skill-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 24px;
+  /* Grid fallback */
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+.skill-grid > * {
+  flex: 1 1 250px;
+  margin: 12px;
+  min-width: 0;
+}
+
+/* Modern browsers with grid support */
+@supports (display: grid) {
+  .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .skill-grid > * {
+    margin: 0;
+  }
 }
 
 .skill-card {
@@ -450,6 +558,18 @@ section:last-child {
   gap: 10px;
 }
 
+@supports not (gap: 10px) {
+  .project-header {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  
+  .project-header > * {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
 .project-header h3 {
   font-size: 1.75rem;
   color: var(--text);
@@ -491,6 +611,18 @@ section:last-child {
   border-top: 1px dashed var(--border);
 }
 
+@supports not (gap: 16px) {
+  .project-footer {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  
+  .project-footer > * {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
 .stack {
   font-size: 0.9375rem;
   color: var(--sub);
@@ -499,8 +631,18 @@ section:last-child {
 
 .project-links {
   display: flex;
-  gap: 12px;
   flex-wrap: wrap;
+  gap: 12px;
+}
+
+@supports not (gap: 12px) {
+  .project-links {
+    margin: -6px;
+  }
+  
+  .project-links a {
+    margin: 6px;
+  }
 }
 
 .project-links a {
@@ -584,6 +726,7 @@ footer {
     flex: 0 0 auto;
     width: 100%;
     max-width: 250px;
+    padding-bottom: 100%; /* aspect-ratio: 1 fallback */
     aspect-ratio: 1;
   }
 
