@@ -62,68 +62,81 @@ img {
   position: relative;
   display: block;
   visibility: visible;
-  text-align: center;
   padding: 60px 20px;
   background: white;
   border-bottom: 1px solid var(--border);
   z-index: 1;
 }
 
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .hero-image {
-  width: 180px;
-  height: 180px;
-  margin: 0 auto 30px;
-  border-radius: 50%;
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+  aspect-ratio: 1;
+  border-radius: 12px;
   overflow: hidden;
-  border: 4px solid var(--accent);
+  border: 2px solid var(--border);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: var(--bg);
 }
 
 .hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
-.hero h1 {
+.hero-text {
+  flex: 0 0 66.666%;
+  max-width: 66.666%;
+}
+
+.hero-text h1 {
   font-size: 2.5rem;
   margin-bottom: 12px;
   color: var(--text);
 }
 
-.hero .role {
+.hero-text .role {
   font-size: 1.25rem;
   color: var(--accent);
   font-weight: 600;
   margin-bottom: 16px;
 }
 
-.hero .intro {
+.hero-text .intro {
   font-size: 1.125rem;
   color: var(--text-light);
   margin-bottom: 24px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  line-height: 1.7;
 }
 
-.hero .links {
+.hero-text .links {
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
-.hero .links a {
+.hero-text .links a {
   padding: 10px 20px;
   background: var(--accent);
   color: white;
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.9375rem;
+  transition: all 0.2s ease;
 }
 
-.hero .links a:hover {
+.hero-text .links a:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -208,30 +221,8 @@ section:last-child {
   gap: 24px;
 }
 
-.about-intro {
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
-}
-
-.about-image {
-  flex-shrink: 0;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 3px solid var(--accent);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.about-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .about-text {
-  flex: 1;
+  width: 100%;
 }
 
 .intro-main {
@@ -582,21 +573,41 @@ footer {
     padding: 40px 20px;
   }
 
-  .hero-image {
-    width: 150px;
-    height: 150px;
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
   }
 
-  .hero h1 {
+  .hero-image {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 1;
+  }
+
+  .hero-text {
+    flex: 1 1 auto;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-text h1 {
     font-size: 2rem;
   }
 
-  .hero .role {
+  .hero-text .role {
     font-size: 1.125rem;
   }
 
-  .hero .intro {
+  .hero-text .intro {
     font-size: 1rem;
+  }
+
+  .hero-text .links {
+    justify-content: center;
   }
 
   .container {
@@ -623,5 +634,23 @@ footer {
   .hero .links a {
     width: 100%;
     max-width: 200px;
+  }
+
+  /* About Section Responsive */
+  .intro-main {
+    font-size: 1rem;
+  }
+
+  /* Card Content Responsive */
+  .card-content {
+    padding: 24px;
+  }
+
+  .card-header {
+    padding: 20px 24px;
+  }
+
+  .card-header h2 {
+    font-size: 1.5rem;
   }
 }
