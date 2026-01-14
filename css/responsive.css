@@ -1,0 +1,113 @@
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 20px;
+  }
+  
+  .hero-title-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.25rem;
+    margin-bottom: 0;
+  }
+  
+  .hero-text .role {
+    font-size: 1.125rem;
+  }
+  
+  .hero-text .intro {
+    font-size: 1rem;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-image {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 250px;
+    padding-bottom: 100%; /* aspect-ratio: 1 fallback */
+    aspect-ratio: 1;
+    margin-left: 0;
+  }
+
+  .hero-text {
+    flex: 1 1 auto;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text .role {
+    font-size: 1.125rem;
+  }
+
+  .hero-text .intro {
+    font-size: 1rem;
+  }
+
+  .hero-text .links {
+    justify-content: center;
+  }
+
+  .container {
+    padding: 40px 15px;
+  }
+
+  section {
+    margin-bottom: 40px;
+  }
+  
+  .section-card {
+    margin-bottom: 40px;
+  }
+
+  section h2 {
+    font-size: var(--font-3xl);
+  }
+
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero .links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero .links a {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  /* About Section Responsive */
+  .intro-main {
+    font-size: 1rem;
+  }
+
+  /* Card Content Responsive */
+  .card-content {
+    padding: 24px 24px 24px 10%;
+  }
+
+  .card-header {
+    padding: 20px 24px 20px 10%;
+  }
+
+  .card-header h2 {
+    font-size: 1.5rem;
+  }
+}

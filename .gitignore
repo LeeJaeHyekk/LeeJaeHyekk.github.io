@@ -24,3 +24,8 @@ build/
 # TypeScript source files (for future migration)
 src/
 tsconfig.json
+
+# Temporary files
+nul
+*.tmp
+*.temp

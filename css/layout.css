@@ -1,0 +1,23 @@
+/* Layout Styles */
+.container {
+  position: relative;
+  display: block;
+  visibility: visible;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 20px;
+  z-index: 1;
+}
+
+section {
+  position: relative;
+  display: block;
+  visibility: visible;
+  margin-bottom: 48px;
+  opacity: 1;
+  z-index: 1;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}

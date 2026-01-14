@@ -1,0 +1,11 @@
+# robots.txt for LeeJaeHyekk.github.io
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://LeeJaeHyekk.github.io/sitemap.xml
+
+# Disallow unnecessary paths (if any)
+# Disallow: /admin/
+# Disallow: /private/

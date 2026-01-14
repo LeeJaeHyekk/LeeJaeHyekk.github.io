@@ -1,0 +1,24 @@
+{
+  "name": "leejaehyekk-portfolio",
+  "version": "1.0.0",
+  "description": "프론트엔드 개발자 이재혁의 포트폴리오 웹사이트",
+  "author": "이재혁",
+  "license": "UNLICENSED",
+  "homepage": "https://LeeJaeHyekk.github.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeeJaeHyekk/LeeJaeHyekk.github.io.git"
+  },
+  "scripts": {
+    "minify-css": "csso css/style.css -o css/style.min.css",
+    "build": "npm run minify-css",
+    "optimize-images": "echo '이미지 최적화는 수동으로 진행해주세요. WebP 변환 도구 사용 권장.'"
+  },
+  "devDependencies": {
+    "csso-cli": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}

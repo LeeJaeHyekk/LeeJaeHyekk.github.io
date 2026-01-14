@@ -1,0 +1,39 @@
+/* CSS Variables with fallback colors */
+:root {
+  --bg: #f8f9fa;
+  --text: #0f172a;
+  --text-light: #475569;
+  --sub: #64748b;
+  --accent: #667eea;
+  --accent-hover: #5568d3;
+  --border: #e2e8f0;
+  --border-radius: 12px;
+  
+  /* Common spacing */
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  
+  /* Common shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 6px 20px rgba(0, 0, 0, 0.25);
+  
+  /* Common transitions */
+  --transition-base: all 0.3s ease;
+  --transition-fast: all 0.2s ease;
+  
+  /* Common font sizes */
+  --font-xs: 0.875rem;
+  --font-sm: 0.9375rem;
+  --font-base: 1rem;
+  --font-md: 1.0625rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.25rem;
+  --font-2xl: 1.375rem;
+  --font-3xl: 1.75rem;
+  --font-4xl: 3rem;
+}
