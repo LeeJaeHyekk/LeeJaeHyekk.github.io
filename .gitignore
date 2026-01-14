@@ -12,3 +12,11 @@ Thumbs.db
 
 # Logs
 *.log
+
+# TypeScript/Node
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+.env
+.env.local
