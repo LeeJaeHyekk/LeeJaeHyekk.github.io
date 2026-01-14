@@ -9,37 +9,53 @@
 </head>
 <body>
 
-  <!-- Hero -->
-  <header class="hero">
-    <div class="hero-content">
-      <div class="hero-image">
-        <img src="assets/images/profile.jpg" alt="이재혁 프로필 사진" />
-      </div>
-      <h1>이재혁</h1>
-      <p class="role">Frontend Developer</p>
-      <p class="intro">
-        사용자 경험과 코드 품질을 함께 설계하는 프론트엔드 개발자
-      </p>
-      <div class="links">
-        <a href="mailto:ssy960105@gmail.com">Email</a>
-        <a href="https://github.com/LeeJaeHyekk" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://ssy9960105.tistory.com/" target="_blank" rel="noopener noreferrer">Blog</a>
-      </div>
-    </div>
-  </header>
-
-  <main class="container">
-
-    <!-- About -->
-    <section class="section-card">
-      <div class="card-header">
-        <h2>About</h2>
-      </div>
-      <div class="card-content">
-        <div class="card-image">
-          <img src="assets/images/about.jpg" alt="About" />
+  <div class="layout">
+    <!-- Sidebar: Personal Info -->
+    <aside class="sidebar">
+      <div class="profile-section">
+        <div class="profile-image">
+          <img src="assets/images/JaeHyuk_Lee_Resume_Photo.jpg" alt="이재혁 프로필 사진" />
         </div>
-        <div class="card-text">
+        <div class="profile-info">
+          <h1>이재혁</h1>
+          <p class="role">Frontend Developer</p>
+          <div class="contact-info">
+            <a href="mailto:ssy960105@gmail.com" class="contact-item">
+              <span class="contact-icon">✉</span>
+              <span>ssy960105@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Links Section -->
+      <div class="links-section">
+        <h3>Links</h3>
+        <div class="links">
+          <a href="https://github.com/LeeJaeHyekk" target="_blank" rel="noopener noreferrer" class="link-item">
+            <span class="link-icon">🔗</span>
+            <span>GitHub</span>
+          </a>
+          <a href="https://ssy9960105.tistory.com/" target="_blank" rel="noopener noreferrer" class="link-item">
+            <span class="link-icon">📝</span>
+            <span>Blog</span>
+          </a>
+          <a href="https://www.devtrail.net" target="_blank" rel="noopener noreferrer" class="link-item">
+            <span class="link-icon">🌐</span>
+            <span>득근득근 프로젝트</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- About / 자기소개 -->
+      <section class="section-card">
+        <div class="card-header">
+          <h2>About</h2>
+        </div>
+        <div class="card-content">
           <p>
             React와 TypeScript 기반으로 서비스의 구조와 유지보수성을 고민하며 개발해왔습니다.
             단순히 기능을 구현하는 것을 넘어, 사용자가 신뢰할 수 있고
@@ -50,132 +66,137 @@
             그리고 배포 환경까지 서비스 전반의 흐름을 이해하고 있습니다.
           </p>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Skills -->
-    <section class="section-card">
-      <div class="card-header">
-        <h2>Skills</h2>
-      </div>
-      <div class="card-content">
-        <div class="skill-grid">
-          <div class="skill-card">
-            <div class="skill-icon">
-              <img src="assets/images/frontend-icon.svg" alt="Frontend" />
+      <!-- Education & Experience / 학력 및 경력 -->
+      <section class="section-card">
+        <div class="card-header">
+          <h2>Education & Experience</h2>
+        </div>
+        <div class="card-content">
+          <!-- Education -->
+          <div class="timeline-section">
+            <h3 class="timeline-title">Education</h3>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>가톨릭관동대학교</h4>
+                <span class="timeline-period">2022.02 졸업</span>
+                <p>전자공학과 | 학점: 2.73 / 4.5</p>
+              </div>
             </div>
-            <h3>Frontend</h3>
-            <ul>
-              <li>React, TypeScript, Vite</li>
-              <li>Zustand, Redux</li>
-              <li>React Router, React Hook Form</li>
-            </ul>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>경일 게임 아카데미</h4>
+                <span class="timeline-period">2022.08 - 2023.05</span>
+                <p>블록체인 기반 핀테크 및 응용 SW개발자 양성과정</p>
+              </div>
+            </div>
           </div>
 
-          <div class="skill-card">
-            <div class="skill-icon">
-              <img src="assets/images/backend-icon.svg" alt="Backend" />
+          <!-- Experience -->
+          <div class="timeline-section">
+            <h3 class="timeline-title">Experience</h3>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>보보스링크 (파견)</h4>
+                <span class="timeline-period">2023.06 – 2025.03 (1년 10개월)</span>
+                <ul>
+                  <li>서비스 유지보수 및 사용자 이슈 분석·처리</li>
+                  <li>신규 기능 QA 및 버그 재현, 수정 작업</li>
+                  <li>프론트엔드–백엔드 협업 경험</li>
+                </ul>
+              </div>
             </div>
-            <h3>Backend</h3>
-            <ul>
-              <li>Node.js, Express</li>
-              <li>TypeORM, MySQL</li>
-              <li>JWT, bcrypt, reCAPTCHA</li>
-            </ul>
-          </div>
-
-          <div class="skill-card">
-            <div class="skill-icon">
-              <img src="assets/images/infra-icon.svg" alt="Infra" />
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>한국마사회</h4>
+                <span class="timeline-period">2020.02 – 2022.02</span>
+                <ul>
+                  <li>고객 응대 및 편의 시설 관리</li>
+                  <li>현장 커뮤니케이션 경험</li>
+                </ul>
+              </div>
             </div>
-            <h3>Infra</h3>
-            <ul>
-              <li>AWS EC2, S3</li>
-              <li>Nginx, PM2</li>
-              <li>Docker, docker-compose</li>
-            </ul>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Projects -->
-    <section class="section-card">
-      <div class="card-header">
-        <h2>Projects</h2>
-      </div>
-      <div class="card-content">
-        <article class="project-card">
-          <div class="project-image">
-            <img src="assets/images/project-deukgeun.jpg" alt="득근득근 프로젝트" />
+      <!-- Skills -->
+      <section class="section-card">
+        <div class="card-header">
+          <h2>Skills</h2>
+        </div>
+        <div class="card-content">
+          <div class="skill-grid">
+            <div class="skill-card">
+              <h3>Frontend</h3>
+              <ul>
+                <li>React, TypeScript, Vite</li>
+                <li>Zustand, Redux</li>
+                <li>React Router, React Hook Form</li>
+              </ul>
+            </div>
+            <div class="skill-card">
+              <h3>Backend</h3>
+              <ul>
+                <li>Node.js, Express</li>
+                <li>TypeORM, MySQL</li>
+                <li>JWT, bcrypt, reCAPTCHA</li>
+              </ul>
+            </div>
+            <div class="skill-card">
+              <h3>Infra</h3>
+              <ul>
+                <li>AWS EC2, S3</li>
+                <li>Nginx, PM2</li>
+                <li>Docker, docker-compose</li>
+              </ul>
+            </div>
           </div>
-          <div class="project-info">
-            <h3>득근득근 (Deukgeun)</h3>
+        </div>
+      </section>
+
+      <!-- Projects / 프로젝트 및 교육경력 -->
+      <section class="section-card">
+        <div class="card-header">
+          <h2>Projects</h2>
+        </div>
+        <div class="card-content">
+          <article class="project-card">
+            <div class="project-header">
+              <h3>득근득근 (Deukgeun)</h3>
+              <span class="project-period">2025.07 - 2025.11</span>
+            </div>
             <p class="project-desc">
               운동 기록 관리와 커뮤니티 기능을 결합한 헬스 플랫폼
             </p>
-
             <ul class="project-points">
               <li>React + TypeScript 기반 SPA 아키텍처 설계</li>
               <li>운동 기록, 루틴, 체중 관리 및 커뮤니티 기능 구현</li>
               <li>JWT 인증, Google reCAPTCHA, API Rate Limiting 적용</li>
               <li>Docker + PM2 기반 배포 및 운영 환경 구성</li>
             </ul>
-
-            <p class="stack">
-              React · TypeScript · Express · MySQL · Docker · AWS
-            </p>
-
-            <div class="project-links">
-              <a href="https://www.devtrail.net" target="_blank" rel="noopener noreferrer">Live</a>
-              <a href="https://github.com/LeeJaeHyekk/deukgeun_ReactProject" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <div class="project-footer">
+              <p class="stack">
+                React · TypeScript · Express · MySQL · Docker · AWS
+              </p>
+              <div class="project-links">
+                <a href="https://www.devtrail.net" target="_blank" rel="noopener noreferrer">Live</a>
+                <a href="https://github.com/LeeJaeHyekk/deukgeun_ReactProject" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
             </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <!-- Experience -->
-    <section class="section-card">
-      <div class="card-header">
-        <h2>Experience</h2>
-      </div>
-      <div class="card-content">
-        <div class="experience-card">
-          <div class="experience-image">
-            <img src="assets/images/experience-boboslink.jpg" alt="보보스링크" />
-          </div>
-          <div class="experience-info">
-            <h3>보보스링크 (파견)</h3>
-            <span>2023.06 – 2025.03</span>
-            <ul>
-              <li>서비스 유지보수 및 사용자 이슈 분석·처리</li>
-              <li>신규 기능 QA 및 버그 재현, 수정 작업</li>
-              <li>프론트엔드–백엔드 협업 경험</li>
-            </ul>
-          </div>
+          </article>
         </div>
-
-        <div class="experience-card">
-          <div class="experience-image">
-            <img src="assets/images/experience-kra.jpg" alt="한국마사회" />
-          </div>
-          <div class="experience-info">
-            <h3>한국마사회</h3>
-            <span>2020.02 – 2022.02</span>
-            <ul>
-              <li>고객 응대 및 편의 시설 관리</li>
-              <li>현장 커뮤니케이션 경험</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
+      </section>
+    </main>
+  </div>
 
   <footer>
-    © 2026 이재혁
+    <p>© 2026 이재혁. All rights reserved.</p>
   </footer>
 
 </body>
