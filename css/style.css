@@ -1,0 +1,276 @@
+:root {
+  --bg: #f9f9f9;
+  --text: #222;
+  --sub: #666;
+  --accent: #2563eb;
+  --card: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero {
+  padding: 80px 20px 60px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+}
+
+.role {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.intro {
+  margin: 16px 0 24px;
+  color: var(--sub);
+  font-size: 1.125rem;
+}
+
+.links a {
+  margin: 0 8px;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+section {
+  margin-top: 60px;
+}
+
+section:first-of-type {
+  margin-top: 40px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 16px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.skill-grid div {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.skill-grid h3 {
+  font-size: 1.125rem;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.skill-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-grid li {
+  color: var(--sub);
+  font-size: 0.9375rem;
+  margin-bottom: 8px;
+}
+
+.skill-grid li:last-child {
+  margin-bottom: 0;
+}
+
+.project {
+  background: var(--card);
+  padding: 28px;
+  border-radius: 16px;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.project-desc {
+  color: var(--sub);
+  margin-bottom: 16px;
+}
+
+.project-points {
+  margin: 16px 0;
+  padding-left: 20px;
+}
+
+.project-points li {
+  margin-bottom: 8px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.stack {
+  font-size: 0.9rem;
+  color: var(--sub);
+  margin: 16px 0;
+}
+
+.project-links a {
+  margin-right: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+.experience {
+  margin-bottom: 32px;
+}
+
+.experience h3 {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+
+.experience span {
+  color: var(--sub);
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.experience ul {
+  margin-top: 12px;
+  padding-left: 20px;
+}
+
+.experience li {
+  margin-bottom: 6px;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--sub);
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 20px 40px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .container {
+    padding: 0 16px 60px;
+  }
+
+  section {
+    margin-top: 48px;
+  }
+
+  section:first-of-type {
+    margin-top: 32px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .skill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project {
+    padding: 20px;
+  }
+
+  .links a {
+    display: inline-block;
+    margin: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .intro {
+    font-size: 0.9375rem;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .links a {
+    margin: 0;
+  }
+}
