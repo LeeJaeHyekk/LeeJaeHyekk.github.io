@@ -107,7 +107,16 @@ img {
   font-size: 1.125rem;
   color: var(--accent);
   font-weight: 600;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+}
+
+.intro-sidebar {
+  font-size: 0.9375rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
 }
 
 .contact-info {
