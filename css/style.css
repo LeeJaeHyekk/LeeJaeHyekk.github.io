@@ -226,8 +226,121 @@ img {
   margin-bottom: 16px;
 }
 
+.card-content p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
 .card-content p:last-child {
   margin-bottom: 0;
+}
+
+.card-content p strong {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* About Section */
+.about-section .about-intro {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 24px;
+}
+
+.about-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  border: 2px solid var(--border);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.intro-main {
+  font-size: 1.125rem;
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+/* Contribution Section */
+.contribution-section {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.contribution-section h3 {
+  font-size: 1.25rem;
+  color: var(--text);
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--accent-light);
+}
+
+.contribution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.contribution-item {
+  padding: 20px;
+  background: var(--bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.contribution-item h4 {
+  font-size: 1.125rem;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.contribution-item p {
+  color: var(--text-light);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.vision-section {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.vision-section h3 {
+  font-size: 1.25rem;
+  color: var(--text);
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--accent-light);
+}
+
+.vision-final {
+  margin-top: 24px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+  border-radius: 8px;
+  border-left: 4px solid var(--accent);
+  font-weight: 500;
+  color: var(--text);
 }
 
 /* Timeline */
@@ -526,6 +639,21 @@ footer {
   .card-header,
   .card-content {
     padding: 24px;
+  }
+
+  .about-section .about-intro {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .about-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .contribution-grid {
+    grid-template-columns: 1fr;
   }
 
   .skill-grid {
