@@ -226,12 +226,6 @@ img {
   margin-bottom: 16px;
 }
 
-.card-content p {
-  color: var(--text-light);
-  line-height: 1.8;
-  margin-bottom: 16px;
-}
-
 .card-content p:last-child {
   margin-bottom: 0;
 }
