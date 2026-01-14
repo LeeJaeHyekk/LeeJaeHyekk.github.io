@@ -20,3 +20,7 @@ build/
 *.tsbuildinfo
 .env
 .env.local
+
+# TypeScript source files (for future migration)
+src/
+tsconfig.json
